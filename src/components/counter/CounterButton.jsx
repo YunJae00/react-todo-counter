@@ -1,4 +1,4 @@
-import { useState } from 'react'
+//import { useState } from 'react'
 import { PropTypes } from 'prop-types';
 import './Counter.css'
 
@@ -47,14 +47,14 @@ function CounterButton({by, incrementMethod, decrementMethod}) {
     // };
     //이렇게 해도 되는데 가장 좋은 방법은 css 파일을 만드는거
 
-    const [count, setCount] = useState(0); //2개의 return 1. state값 2. state를 업데이트하는 함수(배열로 반환됨)
+    //const [count, setCount] = useState(0); //2개의 return 1. state값 2. state를 업데이트하는 함수(배열로 반환됨)
 
-    function incrementCounterFunction(){
-        setCount(count+by);
-        incrementMethod(by);
-    }
+    // function incrementCounterFunction(){
+    //     //setCount(count+by);
+    //     incrementMethod(by);
+    // }
     function decrementCounterFunction(){
-        setCount(count-by);
+        //setCount(count-by);
         decrementMethod(by);
     }
 
@@ -64,7 +64,7 @@ function CounterButton({by, incrementMethod, decrementMethod}) {
             원하는건 클릭했을 때 함수 그 자체를 연결하는거여서 ()가 없음 */}
             <div>
                 <button className="counterButton" 
-                        onClick={incrementCounterFunction}
+                        onClick={()=> incrementMethod(by)}  //이런식으로 onClick 리스너에 incrementCounterFunction 함수의 참조값을 넘겨주는 대신에 화살표함수로 대체 가능
                         //style={{fontSize:"100px"}}  //이런식으로 직접 css스타일 정의 가능
                         //style={buttonStyle}           //이런식으로도 가능 위에서 {} 가 두개인 이유도 이거
                         >+{by}
