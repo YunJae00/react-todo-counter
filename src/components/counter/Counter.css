@@ -1,0 +1,39 @@
+/* const buttonStyle = {
+    fontSize:"16px",
+    backgroundColor: "#00a5ab",
+    width:"100px",
+    margin: "10px",
+    color: "white",
+    padding: "15px",
+    borderRadius: "30px"
+}; */
+
+/* css랑 위에서 한거 차이점 : 이름(ex fontSize/font-size), ;, "" 등등 파일에 따라 다르게 적어줘야함 */
+
+button {
+    font-size:16px;
+    width:100px;
+    margin:10px;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    border-color: black;
+    border-width: 5px;
+}
+
+.counterButton {
+    background-color: #00a5ab;
+}
+
+.resetButton {
+    background-color: #824f8c;
+}
+.count {
+    font-size: 150px;
+    padding: 20px;
+}
+
+.totalCount{
+    font-size: 150px;
+    padding: 20px;
+}
